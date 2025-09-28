@@ -33,7 +33,7 @@ async def home(request: Request):
 
 @app.get("/login")
 async def auth(request: Request):
-    redirect_uri = request.url_for("auth_callback")
+    redirect_uri = os.environ.get("REDIRECT_URI", request.url_for("auth_callback"))
     return await oauth.discord.authorize_redirect(request, redirect_uri=redirect_uri)
 
 @app.get("/auth")
