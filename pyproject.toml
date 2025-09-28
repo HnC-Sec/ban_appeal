@@ -12,13 +12,7 @@ dependencies = [
     "fastapi>=0.117.1",
     "httpx>=0.28.1",
     "itsdangerous>=2.2.0",
+    "python-multipart>=0.0.20",
     "requests>=2.32.5",
     "uvicorn>=0.37.0",
 ]
-
-[project.scripts]
-ban-appeal = "ban_appeal:main"
-
-[build-system]
-requires = ["uv_build>=0.8.19,<0.9.0"]
-build-backend = "uv_build"
